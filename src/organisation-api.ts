@@ -1,12 +1,13 @@
 /// <reference types="Cypress" />
 
 import { Given, Before } from "cypress-cucumber-preprocessor/steps";
-import { organisations } from "../../../fixtures/organisation";
+// import { organisations } from "../../../fixtures/organisation";
+// import { organisations } from '../cypress/fixtures/organization';
 
-const organisationRoute = "**/organisation";
+// const organisationRoute = "**/organisation";
 
 Before(() => {
-  cy.server();
+  // cy.server();
 });
 
 ///////////////// READ /////////////////
@@ -46,7 +47,7 @@ Given("I have an API to deactivate a organisation", () => {
 
 Given("I have an API to add a product to a organisation", () => {
   cy.intercept("PUT", `${organisationRoute}/**/product`, []).as("updateOrganisationProducts");
-  cy.server();
+  // cy.server();
   cy.route("GET", `${organisationRoute}/list`, organisations.withProductAdded).as(
     "getUpdateOrganisationProducts",
   );
