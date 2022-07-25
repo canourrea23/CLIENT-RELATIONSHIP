@@ -1,0 +1,13 @@
+[
+    {
+        "name":"bob",
+        "userType":"user",
+        "premium": false
+    },
+    {
+
+        "name":"Jim",
+        "userType":"user",
+        "premium": true
+    }
+]
