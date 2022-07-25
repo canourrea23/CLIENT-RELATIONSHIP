@@ -6,9 +6,9 @@
 
 // // const organisationRoute = "**/organisation";
 
-// Before(() => {
-//   // cy.server();
-// });
+Before(() => {
+  cy.server();
+});
 
 // ///////////////// READ /////////////////
 // Given("I have an API with organisations", () => {

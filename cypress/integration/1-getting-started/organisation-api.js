@@ -8,18 +8,20 @@ const organisationRoute = "**/organisation";
 
 //make my ouwn code with there fiture file and use cy.intercept and on ts
 
-// import { organisations } from '../cypress/fixtures/organization';
+import { organisations } from '../../fixtures/organization.json';
 
 // const organisationRoute = "**/organisation";
 
-// Before(() => {
-//   // cy.server();
-// });
-beforeEach(() => {
+Before(() => {
+  // cy.server();
+  cy.fixture('organization.json').as('userData')
   cy.log('I run before every test in every spec file!!!!!!')
-})
+});
+// beforeEach(() => {
+//   cy.log('I run before every test in every spec file!!!!!!')
+// })
 
-///////////////// READ /////////////////
+// ///////////////// READ /////////////////
 it('displays a long list', () => {
 cy.intercept({
   method: 'GET'
